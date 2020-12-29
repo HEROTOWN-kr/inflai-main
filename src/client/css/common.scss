@@ -1,0 +1,209 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-width: 1280px;
+  font-family: 'Noto Sans KR', 'Sans-serif';
+  font-size: 12px;
+  font-weight: 400;
+  color: #000;
+  #root {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  .intro {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  .intro-col {
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+
+    -webkit-transform: scale(1.15, 1.15);
+    transform: scale(1.15, 1.15);
+    &:hover {
+      .intro-bg {
+        -webkit-transform: scale(1.15, 1.15);
+        transform: scale(1.15, 1.15);
+      }
+    }
+
+    &.intro-col--left {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 100;
+
+      -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    }
+    &.intro-col--right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 99;
+    }
+    .intro-bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 1s;
+      &.intro-bg--influencer {
+        background: #fa4616 url(../img/intro/bg-influencer.jpg) left center;
+        background-size: cover;
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(250, 70, 22, 0.5);
+        }
+      }
+      &.intro-bg--advertiser {
+        background: #000 url(../img/intro/bg-advertiser.jpg) right center;
+        background-size: cover;
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+    .intro-content {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      color: #fff;
+      .intro-fake {
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        vertical-align: middle;
+      }
+      .intro-area {
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: 200;
+        .intro-title {
+          margin-bottom: 20px;
+          font-size: 62px;
+          font-weight: 100;
+          line-height: 1;
+        }
+        .intro-meta {
+          margin-bottom: 24px;
+          min-height: 90px;
+          .intro-text {
+            font-size: 18px;
+          }
+          .intro-hashtag {
+            margin-top: 12px;
+            font-size: 40px;
+            font-weight: 100;
+          }
+        }
+        .intro-btn {
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          width: 154px;
+          height: 36px;
+          border-radius: 4px;
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          background: #999;
+          background: rgba(255, 255, 255, 0.2);
+          text-decoration: none;
+          .intro-btn__text {
+            display: inline-block;
+            font-size: 14px;
+            line-height: 2.5;
+            vertical-align: middle;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body{
+    min-width: 320px;
+    #root {
+      .intro-col {
+        width: 100%;
+        height: 50%;
+        &.intro-col--left {
+          position: absolute;
+          left: 0;
+          top: 0;
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+        }
+        &.intro-col--right {
+          position: absolute;
+          right: 0;
+          top: auto;
+          bottom: 0;
+        }
+        .intro-content {
+          .intro-area {
+            .intro-title {
+              margin-bottom: 3.125vw;
+              font-size: 7.291666666666667vw;
+            }
+            .intro-meta {
+              margin-bottom: 3.90625vw;
+              min-height: auto;
+              .intro-text {
+                font-size: 2.8645833333333335vw;
+              }
+              .intro-hashtag {
+                margin-top: 3.125vw;
+                font-size: 4.6875vw;
+              }
+            }
+            .intro-btn {
+              padding: 0 3.90625vw;
+              width: auto;
+              height: auto;
+              .intro-btn__text {
+                font-size: 3.125vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
