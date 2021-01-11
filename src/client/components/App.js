@@ -17,7 +17,7 @@ function App() {
         <div className="intro-content">
           <div className="intro-fake" />
           <div className="intro-area">
-            <div className="intro-logo" />
+            <div className="intro-logo blue" />
             <div className="intro-title">인플루언서</div>
             <div className="intro-meta">
               <div className="intro-text">내가 찾던 브랜드 협찬. 당신만의 협찬 파트너</div>
@@ -34,7 +34,7 @@ function App() {
         <div className="intro-content">
           <div className="intro-fake" />
           <div className="intro-area">
-            <div className="intro-logo" />
+            <div className="intro-logo orange" />
             <div className="intro-title">광고주</div>
             <div className="intro-meta">
               <div className="intro-text">내 예산에 가장 효과적인 마케팅</div>

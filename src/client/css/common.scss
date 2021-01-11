@@ -114,12 +114,18 @@ body {
         .intro-logo {
           display: inline-block;
           width: 92px;
-          height: 69px;
+          height: 68px;
           margin-bottom: 24px;
           background-image: url(../img/intro/logo.png);
           //background-image: url(../img/intro/logo@2x.png), none;
           background-repeat: no-repeat;
           background-size: cover;
+          &.blue {
+            background-image: url(../img/intro/logo_blue.png);
+          }
+          &.orange {
+            background-image: url(../img/intro/logo_orange.png);
+          }
         }
         .intro-title {
           margin-bottom: 20px;
