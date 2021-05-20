@@ -21,10 +21,11 @@ function App() {
             <div className="intro-title">인플루언서</div>
             <div className="intro-meta">
               <div className="intro-text">내가 찾던 브랜드 협찬. 당신만의 협찬 파트너</div>
+              <div className="intro-text">인공지능분석을 통해 내 계정을 좀 더 전문화 시키세요</div>
               <div className="intro-hashtag">#인플라이</div>
             </div>
-            <a href={InfPage} className="intro-btn">
-              <span className="intro-btn__text">지금 알아보기</span>
+            <a href={InfPage} className="intro-btn left">
+              <span className="intro-btn__text">시작하기</span>
             </a>
           </div>
         </div>
@@ -41,8 +42,8 @@ function App() {
               <div className="intro-text">쉽고 빠른 인플루언서 매칭</div>
               <div className="intro-text">블로그, 인스타, 유튜브, 틱톡까지</div>
             </div>
-            <a href={BizPage} className="intro-btn">
-              <span className="intro-btn__text">지금 알아보기</span>
+            <a href={BizPage} className="intro-btn right">
+              <span className="intro-btn__text">시작하기</span>
             </a>
           </div>
         </div>

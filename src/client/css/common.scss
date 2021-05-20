@@ -156,6 +156,12 @@ body {
           background: #999;
           background: rgba(255, 255, 255, 0.2);
           text-decoration: none;
+          &.left {
+            background: #74bbe1;
+          }
+          &.right {
+            background: #eea798;
+          }
           .intro-btn__text {
             display: inline-block;
             font-size: 14px;
